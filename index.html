@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Chamak Chowdhury — CSE Student: Software, AI, Cybersecurity & Embedded Systems</title>
+<meta name="description" content="Portfolio of Chamak Chowdhury, Computer Science & Engineering student at IIUC, Chattogram. Software development, AI/ML, cybersecurity and hands-on hardware projects.">
+<meta property="og:title" content="Chamak Chowdhury — Portfolio">
+<meta property="og:description" content="CSE student building across software, AI, cybersecurity and embedded hardware.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://chamakchy.github.io/">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>C</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f3f5f9;--bg2:#fff;--fg:#0f1724;--mut:#56627a;--line:#d9dfea;--acc:#1f5fd1;--accfg:#fff;--sh:0 18px 40px -22px rgba(15,23,36,.35);
+--hf:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;--bf:"Instrument Sans","Segoe UI",system-ui,sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0c111b;--bg2:#131a28;--fg:#e8edf5;--mut:#97a3b8;--line:#232d41;--acc:#8ec5ff;--accfg:#06101d;--sh:0 18px 40px -22px rgba(0,0,0,.8)}}
+:root[data-theme="dark"]{--bg:#0c111b;--bg2:#131a28;--fg:#e8edf5;--mut:#97a3b8;--line:#232d41;--acc:#8ec5ff;--accfg:#06101d;--sh:0 18px 40px -22px rgba(0,0,0,.8)}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 80px)}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 1.0625rem/1.65 var(--bf);transition:background .5s,color .5s;overflow-x:hidden}
+h1,h2,h3{font-family:var(--hf);line-height:1.08;margin:0;letter-spacing:-.02em}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--acc);outline-offset:3px;border-radius:6px}
+.wrap{width:min(1120px,100% - 40px);margin-inline:auto}
+section{padding:clamp(72px,11vw,128px) 0}
+.sr{position:absolute;left:-9999px}
+#bar{position:fixed;top:0;left:0;height:3px;width:100%;background:var(--acc);transform:scaleX(0);transform-origin:left;z-index:60}
+header{position:fixed;inset:0 0 auto 0;z-index:50;padding-top:env(safe-area-inset-top,0px);transition:background .4s,box-shadow .4s}
+header.sm{background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px;transition:height .35s}
+header.sm .nav{height:58px}
+.logo{font:800 1.25rem var(--hf);text-decoration:none;letter-spacing:-.03em}
+.logo i{font-style:normal;color:var(--acc)}
+nav ul{display:flex;gap:4px;list-style:none;margin:0;padding:0}
+nav a{display:block;padding:8px 12px;border-radius:99px;text-decoration:none;font-size:.95rem;color:var(--mut);transition:color .25s,background .25s}
+nav a:hover,nav a.on{color:var(--fg);background:color-mix(in srgb,var(--acc) 14%,transparent)}
+.tools{display:flex;gap:8px;align-items:center}
+.ib{width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:var(--bg2);color:var(--fg);display:grid;place-items:center;cursor:pointer;transition:transform .3s,border-color .3s}
+.ib:hover{transform:rotate(18deg);border-color:var(--acc)}
+.burger{display:none}
+@media (max-width:860px){.burger{display:grid}
+nav{position:fixed;inset:0;background:var(--bg);padding:calc(env(safe-area-inset-top,0px) + 96px) 28px 40px;clip-path:circle(0 at calc(100% - 44px) 40px);transition:clip-path .6s cubic-bezier(.7,0,.2,1);visibility:hidden}
+nav.open{clip-path:circle(150% at calc(100% - 44px) 40px);visibility:visible}
+nav ul{flex-direction:column;gap:2px}nav a{font:600 2rem var(--hf);color:var(--fg);padding:10px 4px;background:none!important}}
+#home{min-height:100svh;display:flex;align-items:center;padding-top:120px;padding-bottom:90px}
+.hero{display:grid;gap:48px;align-items:center}
+@media (min-width:900px){.hero{grid-template-columns:1.15fr .85fr}}
+.hero h1{font-size:clamp(3rem,9vw,6.4rem);font-weight:800}
+.hero h1 span{display:block;overflow:hidden;padding-bottom:.08em}
+.hero h1 b{display:block;font-weight:inherit;transform:translateY(105%);animation:up 1s cubic-bezier(.2,.8,.2,1) forwards}
+.hero h1 span:nth-child(2) b{animation-delay:.12s;color:var(--acc)}
+@keyframes up{to{transform:none}}
+.role{font:600 1.25rem var(--hf);color:var(--mut);margin:22px 0 10px;min-height:1.6em}
+.cur{display:inline-block;width:2px;height:1.1em;background:var(--acc);margin-left:4px;vertical-align:-.15em;animation:bl 1s steps(1) infinite}
+@keyframes bl{50%{opacity:0}}
+.lead{max-width:34em;color:var(--mut);margin:0 0 32px}
+.hero .fade{opacity:0;animation:fade .9s .55s forwards}
+.hero .fade.b{animation-delay:.75s}.hero .fade.c{animation-delay:.95s}
+@keyframes fade{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:99px;border:1px solid var(--line);background:var(--bg2);font:600 .98rem var(--bf);text-decoration:none;cursor:pointer;color:var(--fg);transition:transform .3s,background .3s,border-color .3s,box-shadow .3s}
+.btn:hover{transform:translateY(-3px);border-color:var(--acc);box-shadow:var(--sh)}
+.btn.p{background:var(--acc);color:var(--accfg);border-color:var(--acc)}
+.meta{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:34px;color:var(--mut);font-size:.92rem}
+.meta span::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--acc);margin-right:8px}
+.pic{position:relative;width:min(100%,400px);aspect-ratio:1;justify-self:center}
+.frame{position:absolute;inset:6%;border-radius:50%;overflow:hidden;background:var(--bg2);clip-path:circle(0 at 50% 50%);animation:rev 1.3s .25s cubic-bezier(.7,0,.2,1) forwards}
+@keyframes rev{to{clip-path:circle(75% at 50% 50%)}}
+.frame img{width:100%;height:100%;object-fit:cover;object-position:38% 28%;transform:scale(1.25);animation:zoom 2s .25s cubic-bezier(.2,.8,.2,1) forwards;filter:contrast(1.05)}
+@keyframes zoom{to{transform:scale(1)}}
+.pic svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.pic path{fill:none;stroke:var(--acc);stroke-width:1.6;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;animation:draw 2.6s 1s ease-in-out forwards}
+.pic path.h{stroke-width:1;opacity:.6;animation-delay:2.2s}
+@keyframes draw{to{stroke-dashoffset:0}}
+.pen{position:absolute;left:0;top:0;width:10px;height:10px;margin:-5px;border-radius:50%;background:var(--acc);box-shadow:0 0 0 6px color-mix(in srgb,var(--acc) 22%,transparent);offset-path:path("M200 12a188 188 0 1 1 0 376a188 188 0 1 1 0-376");offset-distance:0;animation:pen 2.6s 1s ease-in-out forwards,pop .4s 3.6s forwards}
+@keyframes pen{to{offset-distance:100%}}@keyframes pop{to{opacity:0;transform:scale(0)}}
+.hd{margin-bottom:clamp(36px,6vw,64px);max-width:640px}
+.hd h2{font-size:clamp(2.1rem,5vw,3.4rem);font-weight:800}
+.hd p{color:var(--mut);margin:14px 0 0}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1);transition-delay:var(--d,0s)}
+.rv.in{opacity:1;transform:none}
+.about{display:grid;gap:36px}
+@media (min-width:860px){.about{grid-template-columns:1fr 1fr;gap:72px}}
+.about p{margin:0 0 18px;max-width:34em}
+.facts{display:grid;gap:0;align-content:start;border-top:1px solid var(--line);margin:0}
+.facts div{display:flex;justify-content:space-between;gap:20px;padding:16px 0;border-bottom:1px solid var(--line)}
+.facts dt{color:var(--mut)}.facts dd{margin:0;font-weight:600;text-align:right}
+.sk{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.card{position:relative;background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:26px;overflow:hidden;transition:transform .4s cubic-bezier(.2,.8,.2,1),box-shadow .4s,border-color .4s}
+.card::after{content:"";position:absolute;inset:0;background:radial-gradient(320px circle at var(--mx,50%) var(--my,0),color-mix(in srgb,var(--acc) 16%,transparent),transparent 60%);opacity:0;transition:opacity .4s;pointer-events:none}
+.card:hover{transform:translateY(-6px);border-color:color-mix(in srgb,var(--acc) 60%,var(--line));box-shadow:var(--sh)}
+.card:hover::after{opacity:1}
+.card h3{font-size:1.25rem;margin-bottom:16px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.tags li{padding:5px 12px;border-radius:99px;border:1px solid var(--line);font-size:.86rem;color:var(--mut);transition:color .25s,border-color .25s,transform .25s}
+.card:hover .tags li{color:var(--fg)}.tags li:hover{border-color:var(--acc);transform:translateY(-2px)}
+.pj{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.pj .card{display:flex;flex-direction:column;gap:14px;padding:30px}
+.cat{font-size:.88rem;color:var(--acc);font-weight:600}
+.pj h3{font-size:1.6rem;margin:0}.pj p{margin:0;color:var(--mut);flex:1}
+.pj .card.soon{border-style:dashed;background:transparent}
+.sk-l{height:11px;border-radius:6px;background:linear-gradient(90deg,var(--line) 30%,color-mix(in srgb,var(--acc) 30%,var(--line)) 50%,var(--line) 70%);background-size:300% 100%;animation:sh 2.4s linear infinite}
+@keyframes sh{to{background-position:-300% 0}}
+.soon .tags li{border-style:dashed;min-width:64px;height:28px}
+.lk{display:flex;gap:10px;flex-wrap:wrap}
+.lk a{font-size:.9rem;font-weight:600;padding:7px 16px;border-radius:99px;border:1px solid var(--line);text-decoration:none;transition:background .25s,color .25s}
+.lk a:hover{background:var(--acc);color:var(--accfg)}
+#research{background:var(--bg2);border-block:1px solid var(--line)}
+.rs{display:grid;gap:40px}
+@media (min-width:860px){.rs{grid-template-columns:1fr 1fr;gap:72px}}
+.quote{font:600 clamp(1.3rem,2.6vw,1.75rem)/1.35 var(--hf);letter-spacing:-.01em;border-left:3px solid var(--acc);padding-left:22px;margin:0}
+.rs .tags li{font-size:.95rem;padding:8px 16px}
+.stats{grid-column:1/-1;display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin-top:8px}
+.stat{border-top:2px solid var(--acc);padding-top:16px}
+.stat b{display:block;font:800 clamp(3rem,7vw,4.6rem)/1 var(--hf);letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.stat span{color:var(--mut)}
+.tl{position:relative;display:grid;gap:34px;padding-left:34px}
+.tl::before{content:"";position:absolute;left:6px;top:8px;bottom:8px;width:2px;background:linear-gradient(var(--acc),var(--line));transform-origin:top;transform:scaleY(0);transition:transform 1.6s cubic-bezier(.6,0,.2,1)}
+.tl.in::before{transform:none}
+.tl article{position:relative;max-width:44em}
+.tl article::before{content:"";position:absolute;left:-34px;top:9px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:2px solid var(--acc)}
+.tl h3{font-size:1.35rem}.tl p{margin:6px 0 0;color:var(--mut)}
+.edu{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+#contact{text-align:center}
+#contact h2{font-size:clamp(2.6rem,8vw,6rem);font-weight:800}
+#contact p{color:var(--mut);max-width:32em;margin:20px auto 34px}
+.soc{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:34px}
+.soc a{padding:10px 20px;border-radius:99px;border:1px solid var(--line);text-decoration:none;font-weight:500;transition:transform .3s,border-color .3s,background .3s}
+.soc a:hover{transform:translateY(-3px);border-color:var(--acc);background:var(--bg2)}
+footer{border-top:1px solid var(--line);padding:28px 0 36px;color:var(--mut);font-size:.92rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between}
+footer .fl{display:flex;gap:18px}footer a{text-decoration:none}footer a:hover{color:var(--fg)}
+#sheet{position:fixed;inset:0;z-index:70;display:grid;place-items:end center;background:rgba(5,8,14,.55);backdrop-filter:blur(4px);opacity:0;visibility:hidden;transition:opacity .4s,visibility .4s}
+#sheet.open{opacity:1;visibility:visible}
+.pane{width:min(520px,100%);background:var(--bg2);border:1px solid var(--line);border-radius:26px 26px 0 0;padding:30px 26px calc(env(safe-area-inset-bottom,0px) + 28px);transform:translateY(100%);transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+@media (min-width:640px){#sheet{place-items:center}.pane{border-radius:26px;transform:translateY(40px) scale(.96)}}
+#sheet.open .pane{transform:none}
+.pane h3{font-size:1.7rem;margin-bottom:6px}.pane>p{color:var(--mut);margin:0 0 20px}
+.pane ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.pane li a{display:flex;justify-content:space-between;padding:14px 18px;border:1px solid var(--line);border-radius:14px;text-decoration:none;font-weight:600;transition:border-color .25s,transform .25s,background .25s}
+.pane li a:hover{border-color:var(--acc);transform:translateX(4px);background:color-mix(in srgb,var(--acc) 10%,transparent)}
+.pane li a span{color:var(--mut);font-weight:400}
+.x{float:right}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-delay:0s!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}.pen{display:none}}
+</style>
+<noscript><style>.rv{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body>
+<div id="bar" aria-hidden="true"></div>
+<header id="top">
+ <div class="wrap nav">
+  <a class="logo" href="#home" aria-label="Chamak Chowdhury, home">Chamak<i>.</i></a>
+  <nav id="menu" aria-label="Primary"><ul id="links"></ul></nav>
+  <div class="tools">
+   <button class="ib" id="theme" aria-label="Toggle light and dark theme"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+   <button class="ib burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 8h16M4 16h16"/></svg></button>
+  </div>
+ </div>
+</header>
+
+<main>
+<section id="home"><div class="wrap hero">
+ <div>
+  <h1><span><b>Chamak</b></span><span><b>Chowdhury</b></span></h1>
+  <p class="role fade"><span class="sr">Computer Science &amp; Engineering student</span><span id="tw" aria-hidden="true"></span><span class="cur" aria-hidden="true"></span></p>
+  <p class="lead fade">I build across software, AI, cybersecurity and embedded hardware, from ML pipelines to stepper-driven machines.</p>
+  <div class="btns fade b"><a class="btn p" href="#projects">View Projects</a><a class="btn" href="https://github.com/ChamakChy" target="_blank" rel="noopener noreferrer">GitHub</a><a class="btn" href="assets/resume.pdf" download="Chamak_Chowdhury_Resume.pdf">Download Resume</a></div>
+  <div class="meta fade c"><span>IIUC, Chattogram</span><span>Graduating December 2027</span></div>
+ </div>
+ <div class="pic">
+  <div class="frame"><img src="assets/profile.jpg" alt="Portrait of Chamak Chowdhury in a dark embroidered panjabi, smiling and looking down" width="720" height="720"></div>
+  <svg viewBox="0 0 400 400" aria-hidden="true"><path pathLength="1" d="M200 12a188 188 0 1 1 0 376a188 188 0 1 1 0-376"/><path class="h" pathLength="1" d="M200 3a197 197 0 1 0 0 394a197 197 0 1 0 0-394"/></svg>
+  <i class="pen" aria-hidden="true"></i>
+ </div>
+</div></section>
+
+<section id="about"><div class="wrap">
+ <div class="hd rv"><h2>About</h2></div>
+ <div class="about">
+  <div class="rv">
+   <p>I'm a Computer Science &amp; Engineering student at International Islamic University Chittagong. My work sits where software meets the physical world: web development, machine learning, cybersecurity, and hardware that moves, senses and draws.</p>
+   <p>Alongside coursework I'm drawn to research in AI and security, and I like projects where I can wire a circuit, flash the firmware and see the result on a desk.</p>
+  </div>
+  <dl class="facts rv" style="--d:.12s">
+   <div><dt>University</dt><dd>IIUC</dd></div><div><dt>Department</dt><dd>Computer Science &amp; Engineering</dd></div>
+   <div><dt>Expected graduation</dt><dd>December 2027</dd></div><div><dt>Location</dt><dd>Chattogram, Bangladesh</dd></div>
+  </dl>
+ </div>
+</div></section>
+
+<section id="skills"><div class="wrap">
+ <div class="hd rv"><h2>Skills</h2><p>Technologies I'm working with.</p></div>
+ <div class="sk" id="skgrid"></div>
+</div></section>
+
+<section id="projects"><div class="wrap">
+ <div class="hd rv"><h2>Projects</h2><p>Hands-on hardware builds, with software projects joining soon.</p></div>
+ <div class="pj" id="pjgrid"></div>
+</div></section>
+
+<section id="research"><div class="wrap rs">
+ <div class="rv"><div class="hd" style="margin:0 0 28px"><h2>Research</h2></div>
+  <p class="quote">Currently involved in multiple research projects, including three manuscripts under peer review and one ongoing research project.</p></div>
+ <div class="rv" style="--d:.12s"><h3 style="margin:8px 0 18px;font-size:1.25rem">Research interests</h3>
+  <ul class="tags"><li>Artificial intelligence</li><li>Cybersecurity</li><li>Intrusion detection</li><li>Machine learning</li><li>Open-set recognition</li><li>Edge &amp; embedded intelligence</li></ul></div>
+ <div class="stats rv" style="--d:.2s">
+  <div class="stat"><b class="num" data-to="3">0</b><span>Manuscripts under review</span></div>
+  <div class="stat"><b class="num" data-to="1">0</b><span>Research project in progress</span></div>
+  <div class="stat"><b class="num" data-to="3">0</b><span>Hardware projects built</span></div>
+  <div class="stat"><b class="num" data-to="6">0</b><span>Semesters completed so far</span></div>
+ </div>
+</div></section>
+
+<section id="experience"><div class="wrap">
+ <div class="hd rv"><h2>Experience &amp; Activities</h2></div>
+ <div class="tl rv">
+  <article><h3>Undergraduate cybersecurity researcher</h3><p>Department of CSE, IIUC, since 2025. Working on security research and preparing manuscripts to IEEE standards.</p></article>
+  <article><h3>Event coordinator &amp; lead cashier</h3><p>Organized several local community events, including Pujo: managed the budget, led teams of youth volunteers and kept each event running smoothly.</p></article>
+ </div>
+</div></section>
+
+<section id="education"><div class="wrap">
+ <div class="hd rv"><h2>Education</h2></div>
+ <div class="edu">
+  <div class="card rv"><small style="color:var(--acc);font-weight:600">Expected December 2027 · 6th semester</small><h3 style="margin:6px 0 8px">B.Sc. in Computer Science &amp; Engineering</h3><p style="margin:0;color:var(--mut)">International Islamic University Chittagong (IIUC), Bangladesh</p></div>
+  <div class="card rv" style="--d:.12s"><h3>Resume</h3><p style="margin:0;color:var(--mut)">A one-page CV with my education, research experience, projects and skills.</p><p style="margin:16px 0 0;display:flex;gap:10px;flex-wrap:wrap"><a class="btn p" href="assets/resume.pdf" download="Chamak_Chowdhury_Resume.pdf">Download Resume</a><a class="btn" href="assets/resume.pdf" target="_blank" rel="noopener noreferrer">View PDF</a></p></div>
+ </div>
+</div></section>
+
+<section id="contact"><div class="wrap">
+ <h2 class="rv">Let's work together.</h2>
+ <p class="rv">Open to internships, research collaborations and software projects. Email me or tap Contact me for more ways to reach me.</p>
+ <div class="rv btns" style="justify-content:center"><button class="btn p" data-open aria-haspopup="dialog">Contact me</button><a class="btn" href="mailto:chamakchy@gmail.com">chamakchy@gmail.com</a></div>
+ <div class="soc rv" id="soc"></div>
+</div></section>
+</main>
+
+<footer><div class="wrap"><span>© <span id="yr"></span> Chamak Chowdhury</span>
+ <div class="fl"><a href="mailto:chamakchy@gmail.com">Email</a><a href="https://github.com/ChamakChy" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.linkedin.com/in/chamakchy/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://orcid.org/0009-0008-4425-4471" target="_blank" rel="noopener noreferrer">ORCID</a></div></div></footer>
+
+<div id="sheet" role="dialog" aria-modal="true" aria-labelledby="sh-t"><div class="pane">
+ <button class="ib x" id="close" aria-label="Close contact panel"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+ <h3 id="sh-t">Get in touch</h3><p>Pick the channel that suits you.</p><ul id="chan"></ul>
+</div></div>
+
+<script>
+const EMAIL="chamakchy@gmail.com";
+const L={GitHub:"https://github.com/ChamakChy",LinkedIn:"https://www.linkedin.com/in/chamakchy/",Facebook:"https://www.facebook.com/chamak.chy123",Kaggle:"https://www.kaggle.com/chamakchowdhury",ORCID:"https://orcid.org/0009-0008-4425-4471"};
+const SKILLS={"Programming & Web":["C/C++","Python","JavaScript","HTML","CSS","React","Node.js","Express.js","MongoDB","SQL"],"AI / ML":["Machine Learning","Deep Learning","Transformer architectures","Reinforcement Learning","RAG / LLM","Adversarial ML"],"Cybersecurity":["Network Security","Intrusion Detection","DDoS Detection","Open-Set Recognition","Phishing Detection"],"Tools":["Git","GitHub","Google Colab","VS Code","Arduino","GRBL","Inkscape","LaTeX","Overleaf"],"Embedded & Hardware":["ESP32-S3","AD8232","Arduino","A4988","CNC / stepper systems","WS2812"]};
+// Placeholder cards for future software projects are generated below. To fill one in, add it to PROJECTS
+// (optional keys: github, demo, status) and lower the placeholder count in the [1,2,3] list.
+const PROJECTS=[
+{title:"CNC Pen Plotter",cat:"Hardware",desc:"A custom CNC pen plotter on a roughly 400 × 400 mm frame, driven by stepper motors through a GT2 belt transmission.",tags:["Arduino","CNC Shield","A4988","GT2 belt","GRBL"]},
+{title:"Arduino LFR & Robot Car",cat:"Robotics",desc:"Line-following robot and robot car projects built on Arduino.",tags:["Arduino","Robotics"]},
+{title:"EdgeArrhythmia",cat:"Embedded",desc:"An edge project that reads ECG signals using an ESP32-S3 and an AD8232 sensor.",tags:["ESP32-S3","AD8232","WS2812"]}];
+const $=s=>document.querySelector(s);
+const NAV=["Home","About","Skills","Projects","Research","Experience","Education","Contact"];
+$("#links").innerHTML=NAV.map(n=>`<li><a href="#${n.toLowerCase()}">${n}</a></li>`).join("");
+$("#skgrid").innerHTML=Object.entries(SKILLS).map(([g,a],i)=>`<div class="card rv" style="--d:${i*.08}s"><h3>${g}</h3><ul class="tags">${a.map(t=>`<li>${t}</li>`).join("")}</ul></div>`).join("");
+$("#pjgrid").innerHTML=PROJECTS.map((p,i)=>`<article class="card rv" style="--d:${i*.1}s"><span class="cat">${p.cat}${p.status?" · "+p.status:""}</span><h3>${p.title}</h3><p>${p.desc}</p><ul class="tags">${p.tags.map(t=>`<li>${t}</li>`).join("")}</ul>${p.github||p.demo?`<div class="lk">${p.github?`<a href="${p.github}" target="_blank" rel="noopener noreferrer">GitHub</a>`:""}${p.demo?`<a href="${p.demo}" target="_blank" rel="noopener noreferrer">Live Demo</a>`:""}</div>`:""}</article>`).join("")+[1,2,3].map(i=>`<article class="card soon rv" style="--d:${(i+2)*.1}s" aria-label="Software project placeholder"><span class="cat">Software · Coming soon</span><h3>Project ${i} title</h3><div style="display:grid;gap:9px;flex:1;align-content:start"><div class="sk-l"></div><div class="sk-l" style="width:88%"></div><div class="sk-l" style="width:60%"></div></div><ul class="tags"><li></li><li></li><li></li></ul></article>`).join("");
+$("#soc").innerHTML=Object.entries(L).map(([k,v])=>`<a href="${v}" target="_blank" rel="noopener noreferrer">${k}</a>`).join("");
+$("#chan").innerHTML=(EMAIL?`<li><a href="mailto:${EMAIL}">Email <span>${EMAIL}</span></a></li>`:"")+Object.entries(L).map(([k,v])=>`<li><a href="${v}" target="_blank" rel="noopener noreferrer">${k} <span>Open</span></a></li>`).join("");
+$("#yr").textContent=new Date().getFullYear();
+/* typewriter */
+const tw=$("#tw"),PH=["Computer Science & Engineering student","Cybersecurity researcher","Full-stack web developer","Hardware & embedded tinkerer"],RM=matchMedia("(prefers-reduced-motion:reduce)").matches;
+if(RM){tw.textContent=PH[0]}else{let i=0,c=0,del=false;const tick=()=>{const w=PH[i];c+=del?-1:1;tw.textContent=w.slice(0,c);let t=del?32:70;if(!del&&c===w.length){del=true;t=1800}else if(del&&c===0){del=false;i=(i+1)%PH.length;t=350}setTimeout(tick,t)};setTimeout(tick,1300)}
+/* count-up */
+const cu=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;cu.unobserve(e.target);const n=e.target,to=+n.dataset.to;if(RM){n.textContent=to;return}const t0=performance.now(),d=1800;const f=t=>{const p=Math.min((t-t0)/d,1);n.textContent=Math.round(to*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(f)};requestAnimationFrame(f)}),{threshold:.6});
+document.querySelectorAll(".num").forEach(n=>cu.observe(n));
+/* theme */
+const root=document.documentElement;let th="dark";try{th=localStorage.getItem("th")||"dark"}catch(e){}
+root.dataset.theme=th;
+$("#theme").onclick=()=>{th=root.dataset.theme==="dark"?"light":"dark";root.dataset.theme=th;try{localStorage.setItem("th",th)}catch(e){}};
+/* menu */
+const menu=$("#menu"),bg=$("#burger");
+const tog=o=>{menu.classList.toggle("open",o);bg.setAttribute("aria-expanded",o);bg.setAttribute("aria-label",o?"Close menu":"Open menu");document.body.style.overflow=o?"hidden":""};
+bg.onclick=()=>tog(!menu.classList.contains("open"));
+menu.addEventListener("click",e=>{if(e.target.closest("a"))tog(false)});
+/* scroll */
+const hd=$("#top"),bar=$("#bar");
+const onS=()=>{const y=scrollY,h=document.documentElement.scrollHeight-innerHeight;hd.classList.toggle("sm",y>40);bar.style.transform=`scaleX(${h>0?y/h:0})`};
+addEventListener("scroll",onS,{passive:true});onS();
+/* reveal + active section */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll(".rv").forEach(n=>io.observe(n));
+const as=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)document.querySelectorAll("#links a").forEach(a=>a.classList.toggle("on",a.getAttribute("href")==="#"+e.target.id))}),{rootMargin:"-45% 0px -50% 0px"});
+document.querySelectorAll("main section").forEach(s=>as.observe(s));
+/* card spotlight */
+document.addEventListener("pointermove",e=>{const c=e.target.closest&&e.target.closest(".card");if(c){const r=c.getBoundingClientRect();c.style.setProperty("--mx",e.clientX-r.left+"px");c.style.setProperty("--my",e.clientY-r.top+"px")}});
+/* contact sheet */
+const sh=$("#sheet");let last;
+const open=o=>{sh.classList.toggle("open",o);document.body.style.overflow=o?"hidden":"";if(o){last=document.activeElement;$("#close").focus()}else if(last)last.focus()};
+document.querySelectorAll("[data-open]").forEach(b=>b.onclick=()=>open(true));
+$("#close").onclick=()=>open(false);
+sh.addEventListener("click",e=>{if(e.target===sh)open(false)});
+addEventListener("keydown",e=>{if(e.key==="Escape"){open(false);tog(false)}});
+</script>
+</body>
+</html>
